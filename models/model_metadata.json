@@ -1,0 +1,21 @@
+{
+  "student": "KHALIL ABDEEN HAMID MUSA",
+  "registration": "25/27483",
+  "seed": 7483,
+  "verification_code": "AI-A2-7483",
+  "regression_model": "linear_regression",
+  "classification_model": "logistic_regression",
+  "clustering_k": 2,
+  "features": [
+    "rainfall_mm",
+    "avg_temp_c",
+    "soil_moisture_pct",
+    "fertilizer_kg",
+    "field_size_ha",
+    "season",
+    "cooperative_support"
+  ],
+  "dataset_fingerprint": "b9a0067604ae61a7add8d7e174a95e588645899008b97feac17f468bb1b8aff2",
+  "rows_raw": 264,
+  "rows_cleaned": 261
+}

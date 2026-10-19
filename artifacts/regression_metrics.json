@@ -1,0 +1,33 @@
+{
+  "task": "regression",
+  "target": "yield_tons",
+  "baseline": {
+    "model": "mean_baseline",
+    "mae": 2.1694,
+    "rmse": 2.7027,
+    "r2": -0.0285
+  },
+  "candidates": [
+    {
+      "model": "mean_baseline",
+      "mae": 2.1694,
+      "rmse": 2.7027,
+      "r2": -0.0285
+    },
+    {
+      "model": "linear_regression",
+      "mae": 0.876,
+      "rmse": 1.0765,
+      "r2": 0.8368
+    },
+    {
+      "model": "gradient_boosting",
+      "mae": 0.9343,
+      "rmse": 1.2294,
+      "r2": 0.7872
+    }
+  ],
+  "selected_model": "linear_regression",
+  "selection_reason": "Selected linear_regression because it achieved the lowest test MAE (0.876) among 3 candidates, with RMSE 1.0765 and R2 0.8368.",
+  "test_rows": 53
+}

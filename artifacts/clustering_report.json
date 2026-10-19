@@ -1,0 +1,85 @@
+{
+  "task": "clustering",
+  "features_used": [
+    "rainfall_mm",
+    "avg_temp_c",
+    "soil_moisture_pct",
+    "fertilizer_kg",
+    "field_size_ha",
+    "cooperative_support"
+  ],
+  "targets_excluded": [
+    "yield_tons",
+    "high_risk"
+  ],
+  "k_scores": [
+    {
+      "k": 2,
+      "silhouette": 0.171
+    },
+    {
+      "k": 3,
+      "silhouette": 0.1447
+    },
+    {
+      "k": 4,
+      "silhouette": 0.1471
+    },
+    {
+      "k": 5,
+      "silhouette": 0.1469
+    },
+    {
+      "k": 6,
+      "silhouette": 0.1545
+    }
+  ],
+  "selected_k": 2,
+  "selection_reason": "K=2 maximised the silhouette score (0.171) across K=2..6 on scaled farm-condition features.",
+  "cluster_centers_scaled": {
+    "0": [
+      -0.031,
+      -0.0402,
+      -0.0324,
+      0.0303,
+      0.0242,
+      0.9886
+    ],
+    "1": [
+      0.0317,
+      0.0412,
+      0.0332,
+      -0.031,
+      -0.0248,
+      -1.0116
+    ]
+  },
+  "profiles": [
+    {
+      "cluster": 0,
+      "size": 132,
+      "median_features": {
+        "rainfall_mm": 993.2781,
+        "avg_temp_c": 18.5716,
+        "soil_moisture_pct": 49.6449,
+        "fertilizer_kg": 124.0647,
+        "field_size_ha": 1.9199,
+        "cooperative_support": 1.0
+      },
+      "plain_language_profile": "A cluster of 132 farms. Rainfall is generally low to moderate. Soil moisture tends to be limited. Fertilizer use is relatively light. Fields are on the smaller side. Most farms receive cooperative support."
+    },
+    {
+      "cluster": 1,
+      "size": 129,
+      "median_features": {
+        "rainfall_mm": 1027.0239,
+        "avg_temp_c": 19.1577,
+        "soil_moisture_pct": 51.7366,
+        "fertilizer_kg": 119.3594,
+        "field_size_ha": 1.8015,
+        "cooperative_support": 0.0
+      },
+      "plain_language_profile": "A cluster of 129 farms. Rainfall is generally low to moderate. Soil moisture tends to be abundant. Fertilizer use is relatively light. Fields are on the smaller side. Most farms do not receive cooperative support."
+    }
+  ]
+}

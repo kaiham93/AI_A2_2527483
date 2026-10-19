@@ -1,0 +1,78 @@
+{
+  "task": "classification",
+  "target": "high_risk",
+  "positive_class": 1,
+  "baseline": {
+    "model": "majority_baseline",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "confusion_matrix": [
+      [
+        26,
+        0
+      ],
+      [
+        27,
+        0
+      ]
+    ],
+    "roc_auc": 0.5
+  },
+  "candidates": [
+    {
+      "model": "majority_baseline",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "confusion_matrix": [
+        [
+          26,
+          0
+        ],
+        [
+          27,
+          0
+        ]
+      ],
+      "roc_auc": 0.5
+    },
+    {
+      "model": "logistic_regression",
+      "precision": 0.9643,
+      "recall": 1.0,
+      "f1": 0.9818,
+      "confusion_matrix": [
+        [
+          25,
+          1
+        ],
+        [
+          0,
+          27
+        ]
+      ],
+      "roc_auc": 1.0
+    },
+    {
+      "model": "random_forest",
+      "precision": 0.9615,
+      "recall": 0.9259,
+      "f1": 0.9434,
+      "confusion_matrix": [
+        [
+          25,
+          1
+        ],
+        [
+          2,
+          25
+        ]
+      ],
+      "roc_auc": 0.9858
+    }
+  ],
+  "selected_model": "logistic_regression",
+  "selection_reason": "Selected logistic_regression because it achieved the highest test F1 (0.9818) among 3 candidates, with precision 0.9643, recall 1.0 and ROC-AUC 1.0.",
+  "test_rows": 53
+}
